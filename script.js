@@ -1,12 +1,10 @@
 function fibonacci(num) {
-// your code here
-	let a=0, b=1,c=a+b;
+let arr= [0,1];
 	for(let i=2;i<=num;i++){
-		a=b;
-		b=c;
-		c=a+b;
+		arr[i]=arr[i-1]+arr[i-2];
 	}
-	return c
+	return arr[num-1];
 }
+console.log(fibonacci(num));
 
 module.exports = fibonacci;
